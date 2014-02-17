@@ -40,10 +40,10 @@
 							<span class="done-{{ todo.done }}"> {{ todo.text }} </span>
 						</li>
 					</ul>
-					<form>
+					<form ng-submit="addTodo()">
 				        <input type="text"  size="30" ng-model="todoText"
 				               placeholder="add new todo here">
-			        	<input class="btn-primary" type="submit" value="add" ng-click="addTodo()">
+			        	<input class="btn-primary" type="submit" value="add">
 				   	</form>
 
 				</div>
