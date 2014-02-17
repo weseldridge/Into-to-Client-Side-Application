@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1" />
+<title>Todo List 4 - Models and More Directives</title>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+
+<style type="text/css">
+	li {
+		display: block;
+	}
+
+	.done-true {
+		text-decoration: line-through;
+	  	color: grey;
+	}
+
+</style>
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+
+			
+
+
+
+				<h2>Todo List</h2>
+				<div ng-controller="TodoCtrl">
+					<div>
+						<input type="text" placeholder="Find Todo item">
+					</div>
+					<span>3 of 4 Remaining - [ archive ]</span>
+					<ul>
+						<li ng-repeat="todo in todos">
+							<input type="checkbox"><span class="done-{{ todo.done }}"> {{ todo.text }} </span>
+						</li>
+					</ul>
+					<form>
+				        <input type="text"  size="30" ng-model="todoText"
+				               placeholder="add new todo here">
+			        	<input class="btn-primary" type="submit" value="add" ng-click="addTodo()">
+				   	</form>
+
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+<script src="bower_components/angular/angular.js"></script>
+
+<script type="text/javascript">
+	
+	function TodoCtrl($scope) {
+		$scope.todos = [
+			{ text: "This is a Todo", done:false },
+			{ text: "This is another Todo", done:false },
+			{ text: "This is one more Todo", done:true },
+			{ text: "This is the last Todo", done:false },
+		];
+
+		$scope.addTodo = function () {
+			$scope.todos.push({text:$scope.todoText, done:false });
+			$scope.todoText = '';
+		}
+	}
+
+</script>
+
+</body>
+</html>
