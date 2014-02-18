@@ -1,0 +1,12 @@
+<div>
+	<input type="text" placeholder="Find a Company" ng-model="searchText">
+</div>
+<br>
+<br>
+<div>
+	<ul>
+		<li ng-repeat="company in companies | filter:searchText">
+			<a ng-href="#/company/{{company.id}}">{{ company.name }}</a>
+		</li>
+	</ul>
+</div>

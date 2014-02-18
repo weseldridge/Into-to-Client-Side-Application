@@ -1,0 +1,11 @@
+{
+  "name": "company",
+  "version": "0.0.0",
+  "description": "A module for keeping track of a company",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wesley Eldridge <weseldridge@gmail.com>",
+  "license": "MIT"
+}
