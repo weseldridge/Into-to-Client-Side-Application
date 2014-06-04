@@ -9,46 +9,8 @@ angular.module('myAppApp')
   	$scope.company = Company.get({id: $routeParams.id});
   })
 .controller('ChartCtrl', function ($scope) {
-  	$scope.thisData = [40,100,80,15,25,60,10];
+  	$scope.thisData = [40,100,80,15,25,60,10,11,45];
   })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .directive('donutChart', function() {
   return {
     scope: { 'data': '=' },
